@@ -5,6 +5,10 @@
 <hibernate-mapping>
 	<class name="domain.PersonDomainModel" table="per">
 
+	    <id name="PersonID" type="uuid-char">
+			<column name="PersonID" length="40" />
+		</id>	
+		
 		<property name="firstName" type="string">
 			<column name="firstName" length="20" not-null="true" />
 		</property>
@@ -17,8 +21,8 @@
 			<column name="street" length="40" not-null="true" />
 		</property>
 
-		<property name="postalCode" type="integer">
-			<column name="postalCode" length="20" not-null="true" />
+		<property name="postalCode" type="int">
+			<column name="postalCode" length="5" not-null="true" />
 		</property>
 		
 		<property name="city" type="string">
@@ -27,6 +31,6 @@
 		
 		<property name="Birthday" type="date">
 			<column name="Birthday" length="7" not-null="true" />
-		</property>
+		</property>	
 	</class>
 </hibernate-mapping>
